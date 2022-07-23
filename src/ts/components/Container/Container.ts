@@ -1,9 +1,7 @@
-import { Component as IntfceComponent } from "../../types/interfaces.js";
+import { Component as InterfaceComponent } from "../../types/interfaces.js";
 import Component from "../Component/Component.js";
 
-/* const apiUrl = "https://pokeapi.co/api/v2/pokemon/"; */
-
-class Container extends Component implements IntfceComponent {
+class Container extends Component implements InterfaceComponent {
   constructor(parent: HTMLElement) {
     super(parent, "container", "section");
 
@@ -13,10 +11,8 @@ class Container extends Component implements IntfceComponent {
   render(): void {
     const html = `
     <h1 class="title">Pokemon List</h1>
-    <ul class="main-list"></ul>
     `;
     this.element.innerHTML = html;
-    /*     new KittenList(this.element.querySelector(".main-content"), this.kitten); */
   }
 }
 
