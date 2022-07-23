@@ -2,7 +2,7 @@ import Component from "./Component";
 
 describe("Given a component Component", () => {
   describe("When is instantiated with a div as a parent and main as a className and 'li' as a tag", () => {
-    test("Then it should show a main as a className", () => {
+    test("Then it should show a li as a tag", () => {
       const container = document.createElement("div");
       const className = "main";
       const tag = "li";
