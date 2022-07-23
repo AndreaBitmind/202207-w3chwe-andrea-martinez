@@ -1,3 +1,3 @@
-const a = 3;
+import Container from "./components/Container/Container.js";
 
-console.log(a);
+new Container(document.body);

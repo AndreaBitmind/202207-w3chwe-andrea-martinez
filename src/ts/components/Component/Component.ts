@@ -1,6 +1,6 @@
-import { Component as IComponent } from "../../types/interfaces.js";
+import { Component as IntfceComponent } from "../../types/interfaces.js";
 
-class Component implements IComponent {
+class Component implements IntfceComponent {
   element: HTMLElement;
 
   constructor(parent: HTMLElement, className: string, tag = "div") {
