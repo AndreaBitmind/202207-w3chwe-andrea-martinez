@@ -1,0 +1,58 @@
+html {
+  font-family: cursive;
+}
+
+h1 {
+  font-size: 3rem;
+  border-bottom: 2px solid red;
+  background-image: url("https://elintranews.com/wp-content/uploads/2020/11/pokemon.jpeg");
+  font-family: cursive;
+  color: yellow;
+  text-shadow: 13px -5px 9px black;
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  margin: 3px 0px 6px 0;
+  font-size: 1.5rem;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  background-color: #fcff006b;
+}
+
+.main-list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.pokemon-card {
+  border: 3px solid red;
+  box-shadow: inset 0px 0px 20px 1px red;
+  font-family: cursive;
+  border-radius: 25px;
+  padding: 2%;
+  margin-bottom: 20px;
+  box-shadow: black;
+  background-color: #efb3b3;
+  width: 206px;
+}
+
+.poke-data {
+  padding-left: 0;
+}
+
+.poke-data > li {
+  display: flex;
+  justify-content: space-evenly;
+}

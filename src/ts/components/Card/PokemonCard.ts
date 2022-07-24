@@ -16,7 +16,7 @@ class PokemonCard extends Component implements IComponent {
   async render() {
     this.element.innerHTML = `
     <h3>${this.pokemon.name}</h3>
-    <ul>
+    <ul class="poke-data">
       <li>Moves: ${this.pokemon.moves}</li>
       <li>Height: ${this.pokemon.height}</li>
       <li><img src=${this.pokemon.photo} alt=${this.pokemon.name}></li>
