@@ -26,8 +26,6 @@ const pokemonsCatch = async (apiUrl: string): Promise<void> => {
 
   const resultPromises = await Promise.all(pokemonInfo);
 
-  console.log(resultPromises);
-
   resultPromises.forEach((pokemon: any) => {
     new PokemonCard(document.querySelector(".main-list"), pokemon);
   });
