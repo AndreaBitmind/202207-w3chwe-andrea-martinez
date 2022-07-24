@@ -5,15 +5,26 @@ export interface Component {
 }
 
 export interface PokemonList {
-  name: string;
-  url: string;
+  count: number;
+  next: string;
+  previous: null | string;
+  results: {
+    name: string;
+    url: string;
+  };
 }
 export type PokemonArray = PokemonList[];
 
 export interface PokemonCard {
   name: string;
+  pokeHeight: number;
   photo: string;
-  ability: string;
-  height: number;
-  weight: number;
+}
+
+export interface PokemonInfo {
+  results: {
+    name: string;
+    url: string;
+    photo: string;
+  }[];
 }
