@@ -16,9 +16,11 @@ export interface PokemonList {
 export type PokemonArray = PokemonList[];
 
 export interface PokemonCard {
+  height: number;
+  moves: string;
   name: string;
-  pokeHeight: number;
   photo: string;
+  url: string;
 }
 
 export interface PokemonInfo {
@@ -26,5 +28,7 @@ export interface PokemonInfo {
     name: string;
     url: string;
     photo: string;
+    height: number;
+    moves: string;
   }[];
 }

@@ -1,14 +1,18 @@
-import { PokemonList, PokemonInfo } from "../types/interfaces";
+import {
+  PokemonInfo,
+  PokemonCard as InterfacePokemonCard,
+} from "../types/interfaces.js";
+import PokemonCard from "../components/Card/PokemonCard.js";
 
-const url: string = "https://pokeapi.co/api/v2/pokemon/";
+const url = "https://pokeapi.co/api/v2/pokemon";
 
-const pokemonsCatch = async (apiUrl: string) => {
+const pokemonsCatch = async (apiUrl: string): Promise<void> => {
   const responseCatch = await fetch(apiUrl);
   const pokemonObject = await responseCatch.json();
 
   const pokemonInfo: Promise<PokemonInfo>[] = pokemonObject.results.map(
-    async (pokemon: PokemonList) => {
-      const responsePokemonInfo = await fetch(pokemon.results.url);
+    async (pokemon: InterfacePokemonCard) => {
+      const responsePokemonInfo = await fetch(pokemon.url);
       const responsePokemonInfoJson = await responsePokemonInfo.json();
 
       return {
@@ -22,7 +26,13 @@ const pokemonsCatch = async (apiUrl: string) => {
 
   const resultPromises = await Promise.all(pokemonInfo);
 
-  return resultPromises;
+  console.log(resultPromises);
+
+  resultPromises.forEach((pokemon: any) => {
+    new PokemonCard(document.querySelector(".main-list"), pokemon);
+  });
 };
 
 pokemonsCatch(url);
+
+export default pokemonsCatch;
