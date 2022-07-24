@@ -26,7 +26,7 @@ class PokemonList extends Component implements InterfaceComponent {
       everyPokemon.className = "one-Pokemon";
       this.element.appendChild(everyPokemon);
 
-      const html = `<a href="${pokemonId.url}">${pokemonId.name}</a>`;
+      const html = `<a href="${pokemonId.results.url}">${pokemonId.results.name}</a>`;
 
       everyPokemon.innerHTML = html;
     });
